@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pocket /> should render correctly 1`] = `
+<styled.div>
+  <styled.div>
+    <CurrencyLabel>
+      £
+    </CurrencyLabel>
+    <AmountLabel>
+      You have 
+      EUR
+      55.22
+    </AmountLabel>
+  </styled.div>
+  <styled.div>
+    <AmountInput
+      autoFocus={true}
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </styled.div>
+</styled.div>
+`;
