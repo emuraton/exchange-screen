@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Exchange from './scenes/Exchange/Exchange';
+
 function App() {
+  async function fetchRates(navigation) {
+    const res = await fetch(
+      `https://api.exchangeratesapi.io/latest?base=${navigation.activeSelectedPocket}`
+    );
+    return await res.json();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Exchange fetchRates={fetchRates} />
     </div>
   );
 }
